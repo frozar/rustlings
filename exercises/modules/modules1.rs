@@ -9,8 +9,8 @@ mod sausage_factory {
         String::from("Ginger")
     }
 
-    fn make_sausage() {
-        get_secret_recipe();
+    pub fn make_sausage() {
+        println!("{}", get_secret_recipe());
         println!("sausage!");
     }
 }
