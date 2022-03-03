@@ -8,7 +8,7 @@
 
 use std::num::ParseIntError;
 
-fn main() -> Result<i32, ParseIntError> {
+fn main() -> Result<(), ParseIntError> {
     let mut tokens = 100;
     let pretend_user_input = "8";
 
@@ -16,11 +16,11 @@ fn main() -> Result<i32, ParseIntError> {
 
     if cost > tokens {
         println!("You can't afford that many!");
-        Ok(cost)
+        Ok(())
     } else {
         tokens -= cost;
         println!("You now have {} tokens.", tokens);
-        Ok(cost)
+        Ok(())
     }
 }
 
